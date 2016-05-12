@@ -10,6 +10,11 @@ extern "C" void CALLBACK PatchExe(HWND hwnd, HINSTANCE hinst, LPCSTR lpszCmdLine
 
 	std::FILE *fp = std::fopen(lpszCmdLine, "r+b");
 	if (fp) {
+		// save backup copy of original file
+		std::stringstream backup;
+		backup << lpszCmdLine << ".bak";
+		CopyFile(lpszCmdLine, backup.str().c_str(), FALSE);
+
 		// read .exe file contents to string
 		std::string contents;
 		std::fseek(fp, 0, SEEK_END);
