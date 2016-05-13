@@ -3,7 +3,7 @@ Patch for EU4 and Stellaris to work on Windows XP
 
 ## Supported games:
 - EU4: 1.6.1 - 1.6.3
-- Stellaris 1.0.0 - 1.0.1
+- Stellaris 1.0.0 - 1.0.2
 
 ## Works with:
 - Codex;
