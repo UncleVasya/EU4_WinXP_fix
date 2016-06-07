@@ -30,5 +30,6 @@ _ReSharper*/
 *.opensdf
 *.sln
 */ipch
-euXP.dll
 
+d3d9.dll
+ws2_32.dll
