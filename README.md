@@ -1,5 +1,5 @@
 # EU4 and Stellaris WinXP fix
-Patch for EU4 and Stellaris to work on Windows XP
+Patch for EU4, HoI 4 and Stellaris to work on Windows XP.
 
 ## Supported games:
 - Europa Universalis 4: 1.6.1 - 1.6.3
