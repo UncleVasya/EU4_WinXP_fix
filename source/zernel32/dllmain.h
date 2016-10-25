@@ -1,2 +1,2 @@
 
-#pragma comment(linker, "/export:PatchExe=_PatchExe@16")
+#pragma comment(linker, "/export:PatchFile=_PatchFile@16")
