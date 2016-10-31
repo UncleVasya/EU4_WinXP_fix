@@ -27,12 +27,8 @@ public:
     virtual void callback(PeLib::PeFile64 &file) {patchPeHeader<64>(file);}
 };
 
-// pathes file's imports to use my proxy-dll instead of original one
-void patchImports(LPCSTR filename) 
+void fileStringReplace(LPCSTR filename, LPCSTR old_str, LPCSTR new_str)
 {
-	std::string old_name("KERNEL32.dll"); // original dll called by game
-	std::string new_name("ZERNEL32.dll"); // my proxy-dll
-
 	std::FILE *fp = std::fopen(filename, "r+b");
 
 	// read game file contents to string
@@ -44,14 +40,22 @@ void patchImports(LPCSTR filename)
 
 	// replace original dll name with my proxy dll
 	size_t pos;
-	while( (pos = contents.find(old_name)) != std::string::npos) {
-		contents.replace(pos, old_name.length(), new_name);
+	while( (pos = contents.find(old_str)) != std::string::npos) {
+		contents.replace(pos, strlen(old_str), new_str);
 	}
 
 	// write edited file contents to disk
 	std::rewind(fp);
 	std::fwrite(contents.data(), contents.size(), 1, fp);
 	std::fclose(fp);
+}
+
+// pathes file's imports to use my proxy-dll instead of original one
+void patchImports(LPCSTR filename) 
+{
+	fileStringReplace(filename, "KERNEL32.dll", "ZERNEL32.dll");
+	fileStringReplace(filename, "WS2_32.dll", "ZS2_32.dll");
+	fileStringReplace(filename, "d3d9.dll", "z3d9.dll");
 }
 
 // patches file's PE header to make it compatible with WinXP
