@@ -14,6 +14,7 @@
 #pragma comment(linker, "/export:GetTickCount64=kernel32.GetTickCount")
 #pragma comment(linker, "/export:K32GetProcessMemoryInfo=psapi.GetProcessMemoryInfo") 
 #pragma comment(linker, "/export:InitializeCriticalSectionEx=_InitializeCriticalSectionEx@12")
+#pragma comment(linker, "/export:GetThreadId=_GetThreadId@4")
 
 // forwards to the real dll
 #pragma comment(linker, "/export:ActivateActCtx=kernel32.ActivateActCtx,@1")
