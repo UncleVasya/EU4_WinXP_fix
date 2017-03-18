@@ -3,7 +3,7 @@ Patch for EU4, HoI 4, CK2 and Stellaris to work on Windows XP.
 
 ## Last checked versions:
 - Europa Universalis 4: 1.19.2
-- Hearts of Iron 4: 1.2.0
+- Hearts of Iron 4: 1.3.3
 - Stellaris: 1.4.1
 - Crusader Kings 2: 2.7.1
 
