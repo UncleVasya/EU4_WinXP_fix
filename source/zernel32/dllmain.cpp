@@ -56,6 +56,8 @@ void patchImports(LPCSTR filename)
 	fileStringReplace(filename, "KERNEL32.dll", "ZERNEL32.dll");
 	fileStringReplace(filename, "WS2_32.dll", "ZS2_32.dll");
 	fileStringReplace(filename, "d3d9.dll", "z3d9.dll");
+	fileStringReplace(filename, "d3d11.dll", "z3d11.dll");
+	fileStringReplace(filename, "D3DCOMPILER_47.dll", "D3DCOMPILER_43.dll"); // not a proxy, but available on WinXP
 }
 
 // patches file's PE header to make it compatible with WinXP
