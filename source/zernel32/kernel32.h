@@ -10,8 +10,13 @@
 #define KERNEL32_API __declspec(dllimport)
 #endif
 
+// our implementations
+#pragma comment(linker, "/export:GetTickCount64=kernel32.GetTickCount")
+#pragma comment(linker, "/export:K32GetProcessMemoryInfo=psapi.GetProcessMemoryInfo") 
+#pragma comment(linker, "/export:InitializeCriticalSectionEx=_InitializeCriticalSectionEx@12")
 #pragma comment(linker, "/export:GetThreadId=_GetThreadId@4")
 
+// forwards to the real dll
 #pragma comment(linker, "/export:ActivateActCtx=kernel32.ActivateActCtx,@1")
 #pragma comment(linker, "/export:AddAtomA=kernel32.AddAtomA,@2")
 #pragma comment(linker, "/export:AddAtomW=kernel32.AddAtomW,@3")
@@ -966,15 +971,3 @@
 #pragma comment(linker, "/export:lstrlen=kernel32.lstrlen,@952")
 #pragma comment(linker, "/export:lstrlenA=kernel32.lstrlenA,@953")
 #pragma comment(linker, "/export:lstrlenW=kernel32.lstrlenW,@954")
-
-
-// This class is exported from the Kernel32.dll
-class KERNEL32_API CKernel32 {
-public:
-	CKernel32(void);
-	// TODO: add your methods here.
-};
-
-extern KERNEL32_API int nKernel32;
-
-KERNEL32_API int fnKernel32(void);

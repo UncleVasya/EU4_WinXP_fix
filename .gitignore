@@ -19,7 +19,6 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-[Bb]in
 [Dd]ebug*/
 *.lib
 *.sbr
@@ -30,4 +29,9 @@ _ReSharper*/
 *.sdf
 *.opensdf
 *.sln
+*/ipch
 
+d3d9.dll
+ws2_32.dll
+zernel32.dll
+lib/

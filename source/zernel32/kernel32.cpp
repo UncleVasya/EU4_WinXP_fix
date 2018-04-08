@@ -1,18 +1,15 @@
-// Kernel32.cpp : Defines the exported functions for the DLL application.
-//
-
 #include "stdafx.h"
-#include "Kernel32.h"
-#include <windows.h>
+#include "kernel32.h"
 
 
-// This is the constructor of a class that has been exported.
-// see Kernel32.h for the class definition
-CKernel32::CKernel32()
+extern "C" BOOL WINAPI InitializeCriticalSectionEx(
+	LPCRITICAL_SECTION lpCriticalSection, DWORD dwSpinCount, DWORD Flags)
 {
-	return;
+	BOOL result = InitializeCriticalSectionAndSpinCount(
+		 lpCriticalSection, dwSpinCount);
+	
+	return result;
 }
-
 
 typedef struct _CLIENT_ID
 {

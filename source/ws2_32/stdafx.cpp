@@ -1,5 +1,5 @@
 // stdafx.cpp : source file that includes just the standard includes
-// eu4_xp_fix.pch will be the pre-compiled header
+// ws2_32.pch will be the pre-compiled header
 // stdafx.obj will contain the pre-compiled type information
 
 #include "stdafx.h"
