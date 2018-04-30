@@ -54,6 +54,7 @@ void fileStringReplace(LPCSTR filename, LPCSTR old_str, LPCSTR new_str)
 void patchImports(LPCSTR filename) 
 {
 	fileStringReplace(filename, "KERNEL32.dll", "ZERNEL32.dll");
+	fileStringReplace(filename, "ADVAPI32.dll", "ZDVAPI32.dll");
 	fileStringReplace(filename, "WS2_32.dll", "ZS2_32.dll");
 	fileStringReplace(filename, "d3d9.dll", "z3d9.dll");
 	fileStringReplace(filename, "d3d11.dll", "z3d11.dll");
