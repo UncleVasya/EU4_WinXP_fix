@@ -1,7 +1,5 @@
-// advapi.cpp : Defines the exported functions for the DLL application.
-//
-
 #include "stdafx.h"
+#include "advapi32.h"
 
 
 extern "C" LONG WINAPI RegGetValueA(

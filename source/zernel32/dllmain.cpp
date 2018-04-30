@@ -1,6 +1,8 @@
-#include <PeLib.h>
-#include <iomanip>
 #include "stdafx.h"
+#include <windows.h>
+#include <sstream>
+#include <iomanip>
+#include <PeLib.h>
 #include "dllmain.h"
 
 

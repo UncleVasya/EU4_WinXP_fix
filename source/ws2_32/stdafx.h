@@ -5,4 +5,3 @@
 #include <windows.h>
 #include "Ws2tcpip.h"
 #include "boost/asio.hpp"
-#include "ws2_32.h"

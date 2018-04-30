@@ -1,5 +1,3 @@
-
-
 // our implementations
 #pragma comment(linker, "/export:RegGetValueA=_RegGetValueA@28")
 

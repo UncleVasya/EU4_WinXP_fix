@@ -4,8 +4,5 @@
 
 #include <PeLib.h>
 #include <windows.h>
-#include <WinBase.h>
-#include <cstdio>
-#include <string>
 #include <sstream>
-#include <boost/algorithm/string.hpp>
+#include <iomanip>

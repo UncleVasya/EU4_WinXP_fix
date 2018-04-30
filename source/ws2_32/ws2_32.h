@@ -1,5 +1,3 @@
-
-
 // our implementations
 #pragma comment(linker, "/export:inet_ntop=_inet_ntop@16")
 #pragma comment(linker, "/export:inet_pton=_inet_pton@12")

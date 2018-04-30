@@ -1,4 +1,8 @@
 #include "stdafx.h"
+#include "Ws2tcpip.h"
+#include "boost/asio.hpp"
+#include "ws2_32.h"
+
 
 extern "C" PCSTR WSAAPI inet_ntop(INT Family, PVOID pAddr, PSTR pStringBuf, size_t StringBufSize) {
 	boost::system::error_code ec;

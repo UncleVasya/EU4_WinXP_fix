@@ -1,5 +1,5 @@
-// dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
+
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -9,7 +9,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		//MessageBox(NULL, "d3d11.dll", "Stellaris WinXP fix", MB_OK);
+		//MessageBox(NULL, "z3d11.dll", "Stellaris WinXP fix", MB_OK);
 		//break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:
