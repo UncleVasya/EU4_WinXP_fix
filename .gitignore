@@ -31,7 +31,10 @@ _ReSharper*/
 *.sln
 */ipch
 
-d3d9.dll
-ws2_32.dll
-zernel32.dll
-lib/
+bin/*
+!bin/normaliz.dll
+!bin/*.cmd
+
+tools/*
+!tools/*.py
+!tools/*.cmd
