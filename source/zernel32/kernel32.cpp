@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include <windows.h>
+#include <psapi.h>
 #include "kernel32.h"
+
+#pragma comment(lib, "psapi.lib")
 
 
 extern "C" BOOL WINAPI InitializeCriticalSectionEx(
@@ -86,4 +89,11 @@ extern "C" DWORD WINAPI GetThreadId(HANDLE Thread)
     FreeLibrary(hModule);
 
     return thread_id;
+}
+
+extern "C" BOOL WINAPI QueryFullProcessImageNameA(
+	HANDLE hProcess, DWORD  dwFlags, LPSTR  lpExeName, PDWORD lpdwSize)
+{
+	DWORD result = GetModuleFileNameExA(hProcess, NULL, lpExeName, *lpdwSize);
+	return result;
 }
